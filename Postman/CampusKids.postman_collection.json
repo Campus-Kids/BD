@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "4753c7ab-985f-4ebf-b8b6-512d2ff49ee2",
+		"name": "CampusKids",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27458239",
+		"_collection_link": "https://grey-shadow-478224.postman.co/workspace/Team-Workspace~11b06a9c-3ba9-497b-8f33-1d145e962c3e/collection/27458239-4753c7ab-985f-4ebf-b8b6-512d2ff49ee2?action=share&source=collection_link&creator=27458239"
+	},
+	"item": [
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "Registrar producto con categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Producto 26\",\r\n    \"descripcion\": \"Descripcion 26\",    \r\n    \"idCategoria\": 2,\r\n    \"imagenes\":[\r\n        {\r\n            \"url\": \"url 1111\"\r\n        },\r\n        {\r\n            \"url\": \"url 2222\"\r\n        },\r\n        {\r\n            \"url\": \"url 3333\"\r\n        },\r\n        {\r\n            \"url\": \"url 4444\"\r\n        },\r\n        {\r\n            \"url\": \"url 5555\"\r\n        }\r\n        \r\n    ]\r\n       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/producto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar producto por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/producto/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar productos por texto clave",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/producto/buscar?texto=hol",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"buscar"
+							],
+							"query": [
+								{
+									"key": "texto",
+									"value": "hol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"nombre\": \"Producto actualizado\",\r\n    \"descripcion\": \"Descripcion Actualizada\",    \r\n    \"idCategoria\": 1,\r\n    \"imagenes\":[\r\n        {\r\n            \"url\": \"url 0001\"\r\n        },\r\n        {\r\n            \"url\": \"url 0001\"\r\n        },\r\n        {\r\n            \"url\": \"url 0003\"\r\n        },\r\n        {\r\n            \"url\": \"url 0004\"\r\n        },\r\n        {\r\n            \"url\": \"url 0009\"\r\n        }\r\n    ]\r\n       \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/producto/actualizar-producto/25",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"actualizar-producto",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar producto por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/producto/31",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"31"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoría",
+			"item": [
+				{
+					"name": "Crear categoría",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Categoría 6 nueva\"      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar categoria por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/categoria/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar categoria por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/categoria/10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar categoria por id con confirmación",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/categoria/10?confirmacion=no",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"10"
+							],
+							"query": [
+								{
+									"key": "confirmacion",
+									"value": "no"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
